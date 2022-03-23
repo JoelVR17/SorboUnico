@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--By:Joel,Ale-->
+<html xmlns:th="hhtp://www.thymeleaf.org"
+      xmlns="hhtp://www.w3.org./1999/xhtml">
+
+    <!-- SE ABRE EL HEAD -->
+    <head>
+        <title>Sorbo Único</title>
+        <meta charset="UTF-8"/>
+        <link href="/css/Menu.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/850c2e9361.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- SE ABRE EL BODY -->
+    <body>
+
+        <!-- SE ESTABLECE EL ENCABEZADO -->
+        <header th:fragment="header" class="header">
+            <nav class="nav">
+                <a th:href="@{/}" class="logo nav-link"><img style="width: 90px; height: 70px; position: relative; left: 80px; transform: translateY(6%)" src="../img/logo.png"></a>
+                <ul class=""> 
+
+                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Reservas</a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Menú</a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Contacto</a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Mi Perfil</a></li>
+
+                </ul>
+            </nav>            
+        </header>
+
+        <!-- SE ESTABLECE LA BARRA LATERAL -->
+        <aside>
+
+        </aside>
+
+        <!-- SE ESTABLECE EL CONTENIDO PRINCIPAL -->
+        <section>
+
+        </section>
+
+        <!-- SE ESTABLECE EL PIE DE PAGINA -->
+        <footer th:fragment="footer" class="footer">
+            <div class="redesSociales">
+                <a class="redesSociales-IconFace" href="https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="redesSociales-IconIns" href="https://www.instagram.com/sorbo.unico/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <p style="font-size: 10px;">&COPY;Derechos CopyRigth</p>
+            </div>
+            
+        </footer>
+
+    </body>
+</html>

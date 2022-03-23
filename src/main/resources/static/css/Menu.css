@@ -1,0 +1,69 @@
+/*By:Joel,Ale*/
+
+.footer {
+    
+    background-color: #608BA1;
+    color : white;
+    text-align: center;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    
+}
+
+.header {
+    
+    background-color: #076AF0;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+.redesSociales { 
+
+    width: 100%;
+    align-items: center;
+    transform: translateY(10%);
+    
+    
+}
+
+.redesSociales-IconFace {
+    
+    color: black;
+    font-size: 22px;
+    height: 20px;
+    
+}
+
+.redesSociales-IconFace:hover {  /*#3b5998*/
+    
+    color: white;
+    font-size: 27px;
+    height: 20px;
+    transition: 0.25s;
+   
+}
+
+.redesSociales-IconIns {
+    
+    color: black;
+    font-size: 25px;
+    height: 20px;
+    
+}
+
+.redesSociales-IconIns:hover {
+
+    color: white;
+    font-size: 28px;
+    height: 20px;
+    transition: 0.25s;
+    
+}
+
