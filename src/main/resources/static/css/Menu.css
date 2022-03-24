@@ -1,5 +1,12 @@
 /*By:Joel,Ale*/
 
+* {
+    
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
 .footer {
     
     background-color: #608BA1;
@@ -13,14 +20,17 @@
     
 }
 
-.header {
+.header {   /*como puse una imagen para el logo, a la hora de utilizar el margin auto se corre {arreglar}"*/
     
-    background-color: #076AF0;
-    height: 80px;
+    height: 100px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/fondoMenu.png);
     
 }
 
@@ -29,7 +39,6 @@
     width: 100%;
     align-items: center;
     transform: translateY(10%);
-    
     
 }
 
@@ -67,3 +76,49 @@
     
 }
 
+.nav {
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav-link {
+    
+    color: #FFF4E6;
+    text-decoration: none;
+    
+}
+
+.nav-menu {
+    
+    display: flex;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav-menu-item {
+    
+    font-size: 25px;
+    font-family: monospace;
+    margin: 0 25px;
+    line-height: 68px;
+    width: max-content;
+    
+}
+
+.nav-menu-link:hover {
+    
+    font-size: 27px;
+    font-weight: bold;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    
+}
+
+.nav-menu-link{
+    
+    padding: 8px 12px;
+    
+}
