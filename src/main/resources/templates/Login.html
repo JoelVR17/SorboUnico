@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<!--By:Joel,Ale-->
-<html xmlnsth="hhtp://www.thymeleaf.org"
-      xmlns="hhtp://www.w3.org./1999/xhtml">
-    
-    <!-- SE ABRE EL HEAD -->
+<html>
     <head>
         <title>Sorbo Único</title>
         <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
         <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR89SHOvwoVDlCmppl0YaLzRiD_yqNyGFeyyA&usqp=CAU"/>
-        <link href="/css/Menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/style.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/850c2e9361.js" crossorigin="anonymous"></script>
         <meta name="description" content="Página principal de Cafetería Sorbo Único"/>
         <meta name="keywords" content="SorboUnico, HTML5,ccs3, semantica"/>
-        
-        
     </head>
     
     <!-- SE ABRE EL BODY -->
     <body>
         
-        <!-- SE ESTABLECE EL ENCABEZADO -->
-        <header th:replace="layout/Plantilla :: header"></header>
+        <!-- SE ESTABLECE EL MAIN -->
+        <main th:replace="layout/LoginPlantilla :: main"></main>
         
         <!-- SE ESTABLECE LA BARRA LATERAL -->
-        <aside>
-            
-        </aside>
+        <aside th:replace="layout/LoginPlantilla :: aside"></aside>
         
-        <!-- SE ESTABLECE EL CONTENIDO PRINCIPAL -->
-        <section>
-            
-        </section>
+        <!-- SE ESTABLECE EL SECTION -->
+        <section th:replace="layout/LoginPlantilla :: section"></section>
         
-        <!-- SE ESTABLECE EL PIE DE PAGINA -->
-        <footer th:replace="layout/Plantilla :: footer"/>
     </body>
-    
-    
 </html>
- 
