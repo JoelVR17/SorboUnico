@@ -17,12 +17,14 @@
     bottom: 0px;
     left: 0;
     width: 100%;
+    border: solid 1px black;
+    
     
 }
 
 .header {   /*como puse una imagen para el logo, a la hora de utilizar el margin auto se corre {arreglar}"*/
     
-    height: 100px;
+    height: 14%;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +40,7 @@
 
     width: 100%;
     align-items: center;
-    transform: translateY(10%);
+    transform: translateY(25%);
     
 }
 
@@ -53,7 +55,7 @@
 .redesSociales-IconFace:hover {  /*#3b5998*/
     
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     height: 20px;
     transition: 0.25s;
    
@@ -122,3 +124,150 @@
     padding: 8px 12px;
     
 }
+
+.barra_arriba_pieP {
+    
+    top: 100px;
+    background: linear-gradient(white,#BEDDED);
+    position: fixed;
+    width: 100%;
+    height: 590px;
+    bottom: 0px;
+    left: 0;
+ 
+}
+
+/*Galeria de imagenes*/
+
+.menuI {
+    
+    text-align: center;
+    margin: 20px;
+    transform: translateY(15px);
+    
+}
+
+.container {
+    
+    transform: translateY(14%);
+    width: 100%;
+    margin: auto;
+    height: 580px;
+    position: fixed;
+    text-align: center;
+    background-color: #BEDDED;
+    
+}
+
+.slider {
+    
+    left: 360px;
+    width: 100%
+    
+}
+
+ul, li {
+    
+    transform: translateY(10%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: black;
+    
+}
+
+ul.slider {
+    
+    position: relative;
+    width: 800px;
+    height: 500px;
+    transform: translateY(3.5%);
+    
+}
+
+ul.slider li {
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    color: black;
+    
+}
+
+ul.slider li img {
+    
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform: translateY(-10%);
+    border: solid black;
+    
+}
+
+ul.slider li:first-child {
+    
+    opacity: 1;
+    text-align: center;
+  
+}
+
+.menuI li a {
+    
+    display: inline-block;
+    padding: 10px;
+    width: 35px;
+    height: 32px;
+    color: black;
+    border: solid black;
+    border-radius: 50%;
+    transform: translateY(-15%);
+    border-bottom-width: 1px;
+    border-top: 1px;    
+    
+}
+
+.menuI li a:hover {
+    
+    display: inline-block;
+    padding: 10px;
+    width: 35px;
+    height: 32px;
+    color: white;
+    border: solid black;
+    border-radius: 50%;
+    transform: translateY(-15%);
+    border-bottom-width: 1px;
+    border-top: 1px;
+    background-color: #9B5523;
+    
+}
+
+.menuI li {
+    
+    display: inline-block;
+    text-align: center;
+    
+}
+
+ul.slider li:target {
+    
+    opacity: 1;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

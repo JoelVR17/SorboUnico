@@ -2,7 +2,7 @@
 <!--By:Joel,Ale-->
 <html xmlnsth="hhtp://www.thymeleaf.org"
       xmlns="hhtp://www.w3.org./1999/xhtml">
-    
+
     <!-- SE ABRE EL HEAD -->
     <head>
         <title>Sorbo Único</title>
@@ -12,30 +12,112 @@
         <script src="https://kit.fontawesome.com/850c2e9361.js" crossorigin="anonymous"></script>
         <meta name="description" content="Página principal de Cafetería Sorbo Único"/>
         <meta name="keywords" content="SorboUnico, HTML5,ccs3, semantica"/>
-        
-        
+
+
     </head>
-    
+
     <!-- SE ABRE EL BODY -->
     <body>
-        
+
         <!-- SE ESTABLECE EL ENCABEZADO -->
         <header th:replace="layout/Plantilla :: header"></header>
-        
+
         <!-- SE ESTABLECE LA BARRA LATERAL -->
         <aside>
-            
+
         </aside>
-        
+
         <!-- SE ESTABLECE EL CONTENIDO PRINCIPAL -->
         <section>
+
+            <div class="container">
+
+                <!-- Menu de imagenes -->
+                <ul class="slider">
+
+                    <!-- Slide 1 -->
+                    <li id="slide1">
+
+                        <img src="../img/slider1.jpg" alt=""/>
+
+                    </li>
+
+                    <!-- Slide 2 -->
+                    <li id="slide2">
+
+                        <img src="../img/slider2.jpg" alt=""/>
+
+                    </li>
+
+                    <!-- Slide 3 -->
+                    <li id="slide3">
+
+                        <img src="../img/slider3.jpg" alt=""/>
+
+                    </li>
+
+                    <!-- Slide 4 -->
+                    <li id="slide4">
+
+                        <img src="../img/slider4.jpg" alt=""/>
+
+                    </li>
+
+                    <!-- Slide 5 -->
+                    <li id="slide5">
+
+                        <img src="../img/slider5.jpeg" alt=""/>
+
+                    </li>
+
+                </ul>
+
+                <!-- Puntos para cambiar de imagen -->
+                <ul class="menuI">
+
+                    <!-- Uno -->
+                    <li>
+                        <a href="#slide1">
+                            <i class="fa-solid fa-1"></i>
+                        </a>
+                    </li>
+
+                    <!-- Dos -->
+                   <li>
+                        <a href="#slide2">
+                            <i class="fa-solid fa-2"></i>
+                        </a>
+                    </li>
+                    
+                    <!-- Tres -->
+                    <li>
+                        <a href="#slide3">
+                            <i class="fa-solid fa-3"></i>
+                        </a>
+                    </li>
+                    
+                    <!-- Cuatro -->
+                    <li>
+                        <a href="#slide4">
+                            <i class="fa-solid fa-4"></i>
+                        </a>
+                    </li>
+                    
+                    <!-- Cinco -->
+                    <li>
+                        <a href="#slide5">
+                            <i class="fa-solid fa-5"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
             
         </section>
-        
+
         <!-- SE ESTABLECE EL PIE DE PAGINA -->
         <footer th:replace="layout/Plantilla :: footer"/>
     </body>
-    
-    
+
+
 </html>
- 
