@@ -1,0 +1,165 @@
+:root {
+    --azul: #608BA1;
+    --celeste: #BEDDED;
+    --cafeClaro: #FFF4E6;
+    --cafeMedio: #EDD8BE;
+    --cafeOscuro: #A18B70;   
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--celeste);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(90%, 200rem);
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/** Header **/
+
+.header {
+    background-image: url(../img/header.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo_nombre_light {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.nav-link {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+.nav-link:nth-child(1) {
+    background-color: rgb(255 255 255 / 50% );
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.contenido {
+    margin: 0 auto;
+}
+
+.usuario {
+    width: 25rem;
+    height: 25rem;
+    border: 1rem solid var(--azul);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -15rem auto 2rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.6);
+}
+
+.usuario-img {
+    width: 100%;
+}
+
+.editar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editar-btn {
+    border-style: none;
+    padding: 1rem;
+    margin: 0 0 2rem;
+    border-radius: 1rem;
+    background-color: var(--azul);
+    color: white;
+    cursor: pointer;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    height: 30rem;
+}
+
+.productos-favoritos, .mi-informacion {
+    background-color: rgb(255 255 255 / 80% );
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.6);
+}
+
+.footer {
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.redes-fb {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-ins {
+    color: #fff;
+    cursor: pointer;
+}
+
+.derechos {
+    margin-bottom: 0;
+    color: #fff;
+}
