@@ -8,7 +8,7 @@
         <title>Sorbo Único</title>
         <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="../css/perfil.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/menu.css" rel="stylesheet" type="text/css"/>
         <link href="../css/normalize.css" rel="stylesheet" type="text/css"/>
         <link href="../css/principal.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -24,32 +24,54 @@
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.reservas}" class="nav-menu-link nav-link"></a></li>
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.contacto}" class="nav-menu-link nav-link"></a></li>
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.nosotros}" class="nav-menu-link nav-link"></a></li>
-                    <li class="nav-menu-item"><a th:href="@{/Perfil(lang=en)}" class="nav-menu-link nav-link"><img style="width: 30px; height: 20px" src="../img/USA.jpg"/></a></li>
-                    <li class="nav-menu-item"><a th:href="@{/Perfil(lang=es)}" class="nav-menu-link nav-link"><img style="width: 30px; height: 20px" src="../img/españa.jpg"/></a></li>
                     <li class="nav-menu-item"><a th:href="@{/}"  class="nav-menu-link nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                     
                 </ul>
             </nav>            
         </header>
 
-        <main th:fragment="main" class="contenedor contenido">
-            <div class="usuario">
-                <img class="usuario-img" src="../img/fperfil.jpg" alt=""/>
-            </div>
-            
-            <div class="editar">
-                <button class="editar-btn" th:text="#{miperfil.editarPerfil}"></button>
-            </div>
-
-            <div class="info">
-                <div class="productos-favoritos">
-                    <h2 class="productos-favoritos-titulo" th:text="#{miperfil.favProd}"></h2>
-                </div>
-                <div class="mi-informacion">
-                    <h2 class="mi-informacion-titulo"th:text="#{miperfil.masIn}"></h2>
-                </div>
+        <main th:fragment="main">
+            <div class="busqueda">
+                <form class="barra-busqueda" action="#">
+                    <input class="busqueda-input" type="text" name="search" placeholder="Busca tu producto.">
+                    <button class="busqueda-button">
+                        <img src="img/search.png" alt="busqueda">
+                    </button>
+                </form>
             </div>
 
+            <section class="productos">
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+
+                <div class="producto">
+                    <h2 class="producto-nombre" th:text="#{menu.producto}"></h2>
+                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
+                </div>
+            </section>
         </main>
 
         <!-- SE ESTABLECE EL PIE DE PAGINA -->
@@ -57,7 +79,7 @@
             <div class="redesSociales">
                 <a class="redesSociales-IconFace" href="https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a class="redesSociales-IconIns" href="https://www.instagram.com/sorbo.unico/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <p style="font-size: 10px;" th:text="#{footer.derechos}"></p>
+                <p style="font-size: 10px;" th:text="#{footer.derechos}">&copy;</p>
             </div>
 
         </footer>

@@ -15,29 +15,31 @@
                 <div class="logo">
                     <img class="logo__imagen" src="img/logo.png" alt="Logo">
                 </div>
-                <h1 class="aside__titulo"><span class="aside__titulo--delgado">Sorbo</span><b>Único</b></h1>
+                <h1 class="aside__titulo"><span class="aside__titulo--delgado" th:text="#{login.sorbo}"></span><b th:text="#{login.unico}"></b></h1>
             </aside>
 
             <section class="principal">
                 <div class="principal__contenido">
-                    <h2 class="principal__titulo">¡Bienvenido!</h2>
+                    <h2 class="principal__titulo" th:text="#{login.bienvenido}"></h2>
 
                     <form class="formulario">
                         <div class="campo">
-                            <label class="campo__label" for="usuario">Email:</label>
+                            <label class="campo__label" for="usuario" th:text="#{login.email}"></label>
                             <input class="campo__field" type="text" placeholder="wilberth22@gmail.com" id="usuario">
                         </div>
 
                         <div class="campo">
-                            <label class="campo__label" for="contrasena">Contraseñas:</label>
+                            <label class="campo__label" for="contrasena" th:text="#{login.contrasenna}"></label>
                             <input class="campo__field" type="password" id="contrasena" placeholder="*********">
                         </div>
 
                         <div class="campo">
-                            <input class="campo__boton" type="button" value="Ingresar" onclick="location.href = '/Login'">
+                            <input class="campo__boton" type="button" value="Ingresar" th:text="#{login.boton}" onclick="location.href = '/Login'">
+                            <!-- PREGUNTAR AL PROFE QUE COMO PONER EL th:text EN UN BOTÓN -->
                         </div>
 
                         <p class="formulario__texto">¿No tienes cuenta? <a href="/Registro">Regístrate</a></p>
+                            <!-- SI SE PONE NE EL P SE DESAPARECE EL A -->
                     </form>
                 </div>
             </section>

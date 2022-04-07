@@ -31,7 +31,9 @@ h1, h2, h3 {
 }
 
 .contenedor {
+    transform: translateY(46%);
     width: min(90%, 200rem);
+    height: 545px;
     margin: 0 auto;
 }
 
@@ -47,42 +49,6 @@ h1, h2, h3 {
 }
 
 /** Header **/
-
-.header {
-    background-image: url(../img/header.jpg);
-    height: 30rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.barra-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-.logo_nombre_light {
-    display: flex;
-    flex-direction: column;
-    font-weight: 300;
-}
-
-.nav-link {
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-
-.nav-link:nth-child(1) {
-    background-color: rgb(255 255 255 / 50% );
-    padding: .5rem;
-    border-radius: 1rem;
-    font-weight: bold;
-}
-
 .contenido {
     margin: 0 auto;
 }
@@ -134,32 +100,3 @@ h1, h2, h3 {
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.6);
 }
 
-.footer {
-    bottom: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azul);
-    width: 100%;
-    padding: 2rem 0 0 0;
-    font-size: 1.5rem;
-    margin-top: 3rem;
-}
-
-.redes-fb {
-    color: #fff;
-    cursor: pointer;
-    margin-right: 1rem;
-}
-
-.redes-ins {
-    color: #fff;
-    cursor: pointer;
-}
-
-.derechos {
-    margin-bottom: 0;
-    color: #fff;
-}

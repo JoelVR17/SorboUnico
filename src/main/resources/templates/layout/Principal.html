@@ -17,15 +17,16 @@
         <!-- SE ESTABLECE EL ENCABEZADO -->
         <header th:fragment="header" class="header">
             <nav class="nav">
-                <a th:href="@{/Login}" class="logo nav-link"><img style="width: 100px; height: 80px; position: relative; left: 120px; transform: translateY(10%)" src="../img/sorbo Unico.png"></a>
+                <a th:href="@{/Login}" class="logo nav-link" th:text="#{menu.logo}" style="font-size: 35px; font-family: sans-serif; padding: 11px 100px"></a>
                 <ul class="nav-menu"> 
+
+                    <li class="nav-menu-item"><a th:href="@{/Perfil}" th:text="#{menu.miPerfil}" class="nav-menu-link nav-link"></a></li>
+                    <li class="nav-menu-item"><a th:href="@{/Menu}" th:text="#{menu.menu}" class="nav-menu-link nav-link"></a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.reservas}" class="nav-menu-link nav-link"></a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.contacto}" class="nav-menu-link nav-link"></a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.nosotros}" class="nav-menu-link nav-link"></a></li>
+                    <li class="nav-menu-item"><a th:href="@{/}"  class="nav-menu-link nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                     
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Mi Perfil</a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Menú</a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Reservas </a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Contacto</a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link">Nosotros</a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}" class="nav-menu-link nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 </ul>
             </nav>            
         </header>
@@ -45,7 +46,7 @@
             <div class="redesSociales">
                 <a class="redesSociales-IconFace" href="https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a class="redesSociales-IconIns" href="https://www.instagram.com/sorbo.unico/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <p style="font-size: 10px;">Todos los derechos reservados. Sorbo Único &copy;</p>
+                <p style="font-size: 10px;" th:text="#{footer.derechos}">&copy;</p>
             </div>
 
         </footer>

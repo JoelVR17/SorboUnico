@@ -14,7 +14,7 @@ public class LogController {
     @GetMapping("/Login")
     public String inicio(){
         
-        return "index";
+        return "Principal";
         
     }
     

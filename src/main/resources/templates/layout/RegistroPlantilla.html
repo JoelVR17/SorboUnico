@@ -16,26 +16,26 @@
             <div class="logo">
                 <img class="logo__imagen" src="img/logo.png" alt="Logo">
             </div>
-                <h1 class="aside__titulo"><span class="aside__titulo--delgado">Sorbo</span><b>Único</b></h1>
+                <h1 class="aside__titulo"><span class="aside__titulo--delgado" th:text="#{registro.sorbo}"></span><b th:text="#{registro.unico}"></b></h1>
         </aside>
 
         <section class="principal">
             <div class="principal__contenido">
-                <h2 class="principal__titulo">¡Crea tu Cuenta!</h2>
+                <h2 class="principal__titulo" th:text="#{registro.creaC}"></h2>
 
                 <form class="formulario">
                     <div class="campo">
-                        <label class="campo__label" for="nombre">Nombre:</label>
+                        <label class="campo__label" for="nombre" th:text="#{registro.nombre}"></label>
                         <input class="campo__field" type="text" placeholder="Wilberth" id="nombre">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="email">Email:</label>
+                        <label class="campo__label" for="email"th:text="#{registro.email}"></label>
                         <input class="campo__field" type="email" id="email" placeholder="wilberth22gmail.com">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="contrasena">Contraseña:</label>
+                        <label class="campo__label" for="contrasena"th:text="#{registro.contrasenna}">:</label>
                         <input class="campo__field" type="password" id="contrasena" placeholder="*********">
                     </div>
 
