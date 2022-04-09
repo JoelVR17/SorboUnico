@@ -152,7 +152,7 @@
     transform: translateY(14%);
     width: 100%;
     margin: auto;
-    height: 580px;
+    height: 100%;
     position: fixed;
     text-align: center;
     background-color: #BEDDED;
@@ -161,7 +161,8 @@
 
 .slider {
     
-    left: 360px;
+    margin: 0 auto;
+    margin-top: 80px;
     width: 100%
     
 }
