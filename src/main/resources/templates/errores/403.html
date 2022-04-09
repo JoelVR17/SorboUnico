@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>  <!--ALEJANDRO PERSONALICE ESTA VENDANA!!!!-->
+        <style>
+            .contenido {
+                text-align: center;
+                border-radius: 20px;
+                top:50%;
+                left: 50%;
+                margin-left: -250px;
+                margin-top: -75px;
+                width: 500px;
+                height: 150px;
+                background-color: red;
+                position: fixed;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>       
+        <div class="contenido">
+            <h2>[[#{e403.titulo}]]</h2>
+            <p>[[#{e403.texto}]]</p>
+            <a th:href="@{/Login}">[[#{accion.regresar}]]</a>
+        </div>        
+    </body>
+</html>
+

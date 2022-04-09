@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security"
+      lang="en">
 <head>
     <title>Sorbo Único</title>
         <meta charset="UTF-8"/>
@@ -40,7 +43,7 @@
                     </div>
 
                     <div class="campo">
-                        <input class="campo__boton" type="button" value="Registrarse" onclick="location.href = '/Login'">
+                        <button class="campo__boton" type="button" value="Registrarse" onclick="location.href = '/Index'" th:text="#{registro.registrarse}"></button>>
                     </div>
                     
                     <p class="formulario__texto">¿Ya tienes cuenta? <a href="/log">Inicia sesión</a></p>

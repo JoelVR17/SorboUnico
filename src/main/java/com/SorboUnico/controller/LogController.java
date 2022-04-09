@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class LogController {
     
-    @GetMapping("/Login")
+    @GetMapping("/")
     public String inicio(){
         
-        return "Principal";
+        return "Login";
         
     }
     
@@ -29,4 +29,11 @@ public class LogController {
         
         return "Login";
     }
+    
+    @GetMapping("/logOut")
+    public String logOut(){
+        
+        return "Login";
+    }
+    
 }

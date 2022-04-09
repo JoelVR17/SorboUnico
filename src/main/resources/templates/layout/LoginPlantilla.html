@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head>
         <title>Sorbo Único</title>
         <meta charset="UTF-8"/>
@@ -22,20 +24,19 @@
                 <div class="principal__contenido">
                     <h2 class="principal__titulo" th:text="#{login.bienvenido}"></h2>
 
-                    <form class="formulario">
+                    <form class="formulario" method="POST" th:action="@{/Login}">
                         <div class="campo">
-                            <label class="campo__label" for="usuario" th:text="#{login.email}"></label>
-                            <input class="campo__field" type="text" placeholder="wilberth22@gmail.com" id="usuario">
+                            <label class="campo__label" for="username" th:text="#{login.email}"></label>
+                            <input class="campo__field" type="text" id="username" name="username" placeholder="wilberth22@gmail.com"/>
                         </div>
 
                         <div class="campo">
-                            <label class="campo__label" for="contrasena" th:text="#{login.contrasenna}"></label>
-                            <input class="campo__field" type="password" id="contrasena" placeholder="*********">
+                            <label class="campo__label" for="password" th:text="#{login.contrasenna}"></label>
+                            <input class="campo__field" type="password" name = "password" id="password" placeholder="*********"/>
                         </div>
 
                         <div class="campo">
-                            <input class="campo__boton" type="button" value="Ingresar" th:text="#{login.boton}" onclick="location.href = '/Login'">
-                            <!-- PREGUNTAR AL PROFE QUE COMO PONER EL th:text EN UN BOTÓN -->
+                            <button class="campo__boton" type="submit" value="Login" th:text="#{login.boton}"></button>
                         </div>
 
                         <p class="formulario__texto">¿No tienes cuenta? <a href="/Registro">Regístrate</a></p>

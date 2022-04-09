@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!--By:Joel,Ale-->
-<html xmlns:th="hhtp://www.thymeleaf.org"
-      xmlns="hhtp://www.w3.org./1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security"
+      lang="en">
 
     <!-- SE ABRE EL HEAD -->
     <head>
@@ -17,7 +19,7 @@
         <!-- SE ESTABLECE EL ENCABEZADO -->
         <header th:fragment="header" class="header">
             <nav class="nav">
-                <a th:href="@{/Login}" class="logo nav-link" th:text="#{menu.logo}" style="font-size: 35px; font-family: sans-serif; padding: 11px 100px"></a>
+                <a th:href="@{/Index}" class="logo nav-link" th:text="#{menu.logo}" style="font-size: 35px; font-family: sans-serif; padding: 11px 100px"></a>
                 <ul class="nav-menu"> 
 
                     <li class="nav-menu-item"><a th:href="@{/Perfil}" th:text="#{menu.miPerfil}" class="nav-menu-link nav-link"></a></li>
@@ -25,8 +27,12 @@
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.reservas}" class="nav-menu-link nav-link"></a></li>
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.contacto}" class="nav-menu-link nav-link"></a></li>
                     <li class="nav-menu-item"><a th:href="@{/}"  th:text="#{menu.nosotros}" class="nav-menu-link nav-link"></a></li>
-                    <li class="nav-menu-item"><a th:href="@{/}"  class="nav-menu-link nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
-                    
+                    <li class="nav-menu-item">
+                        <form method="POST" th:action="@{/logout}" style="display: inline">                    
+                            <a href="/logOut" class="nav-menu-link nav-link" onclick="this.parentNode.submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        </form>
+                    </li>
+
                 </ul>
             </nav>            
         </header>

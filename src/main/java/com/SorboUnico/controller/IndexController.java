@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class IndexController {
     
-    @GetMapping("/")
+    @GetMapping("/Index")
     public String inicio(){
         
         log.info("Estamos usando Spring");
-        return "Login";
+        return "Principal";
         
     }
     
