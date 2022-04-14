@@ -2,48 +2,49 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head>
-        <title>Sorbo Único</title>
-        <meta charset="UTF-8"/>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR89SHOvwoVDlCmppl0YaLzRiD_yqNyGFeyyA&usqp=CAU"/>
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
-       
-        <script src="https://kit.fontawesome.com/850c2e9361.js" crossorigin="anonymous"></script>
-    </head>
-    <body style="margin: 0">
-        <main th:fragment="main" class="contenedor">
-            <aside class="aside">
-                <div class="logo">
-                    <img class="logo__imagen" src="img/logo.png" alt="Logo">
-                </div>
-                <h1 class="aside__titulo"><span class="aside__titulo--delgado" th:text="#{login.sorbo}"></span><b th:text="#{login.unico}"></b></h1>
-            </aside>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorbo Único</title>
+    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/loginyRegistro.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
 
-            <section class="principal">
-                <div class="principal__contenido">
-                    <h2 class="principal__titulo" th:text="#{login.bienvenido}"></h2>
+    <main th:fragment="main" class="contenedor">
+        <aside class="aside">
+            <div class="logo">
+                <img class="logo__imagen" src="img/logo.jpeg" alt="Logo">
+            </div>
+                <h1 class="aside__titulo"><span class="aside__titulo--delgado">Sorbo</span><b>Único</b></h1>
+        </aside>
 
-                    <form class="formulario" method="POST" th:action="@{/Login}">
-                        <div class="campo">
-                            <label class="campo__label" for="username" th:text="#{login.email}"></label>
-                            <input class="campo__field" type="text" id="username" name="username" placeholder="wilberth22@gmail.com"/>
-                        </div>
+        <section class="principal">
+            <div class="principal__contenido">
+                <h2 class="principal__titulo">¡Bienvenido!</h2>
 
-                        <div class="campo">
-                            <label class="campo__label" for="password" th:text="#{login.contrasenna}"></label>
-                            <input class="campo__field" type="password" name = "password" id="password" placeholder="*********"/>
-                        </div>
+                <form class="formulario">
+                    <div class="campo">
+                        <label class="campo__label" for="usuario">Usuario:</label>
+                        <input class="campo__field" type="text" placeholder="Tu usuario." id="usuario">
+                    </div>
 
-                        <div class="campo">
-                            <button class="campo__boton" type="submit" value="Login" th:text="#{login.boton}"></button>
-                        </div>
+                    <div class="campo">
+                        <label class="campo__label" for="contrasena">Contraseña:</label>
+                        <input class="campo__field" type="password" id="contrasena" placeholder="Tu contraseña">
+                    </div>
 
-                        <p class="formulario__texto">¿No tienes cuenta? <a href="/Registro">Regístrate</a></p>
-                            <!-- SI SE PONE NE EL P SE DESAPARECE EL A -->
-                    </form>
-                </div>
-            </section>
-        </main>
-    </body>
+                    <div class="campo">
+                        <input class="campo__boton" type="button" value="Ingresar" onclick="location.href= 'principal.html'">
+                    </div>
+
+                    <p class="formulario__texto">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
 </html>

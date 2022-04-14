@@ -1,0 +1,191 @@
+:root {
+    --azul: #608BA1;
+    --celeste: #BEDDED;
+    --cafeClaro: #FFF4E6;
+    --cafeMedio: #EDD8BE;
+    --cafeOscuro: #A18B70;
+    
+    --complementario: #D99A4C;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--celeste);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(90%, 200rem);
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.header {
+    background-image: url(../img/header.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo_nombre_light {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.nav-link {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.nav-link:nth-child(3) {
+    background-color: rgb(255 255 255 / 50% );
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.reservas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.mesas-radio {
+    text-align: center;
+    width: 40rem;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-style: none;
+    background-color: var(--azul);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 2rem;
+    gap: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.mesa1, .mesa2, .mesa3, .mesa4, .mesa5, .mesa6 {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--celeste);
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.horarios-inputs {
+    border-style: none;
+    background-color: rgb(255 255 255 / 80% );
+    padding: 4rem 0;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fecha {
+    padding: 2rem;
+}
+
+.reserva-btn {
+    margin: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+}
+
+.reserva-btn:hover {
+    background-color: var(--complementario);
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.redes-fb {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-ins {
+    color: #fff;
+    cursor: pointer;
+}
+
+.derechos {
+    margin-bottom: 0;
+    color: #fff;
+}

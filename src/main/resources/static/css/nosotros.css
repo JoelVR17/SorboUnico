@@ -1,0 +1,177 @@
+:root {
+    --azul: #608BA1;
+    --celeste: #BEDDED;
+    --cafeClaro: #FFF4E6;
+    --cafeMedio: #EDD8BE;
+    --cafeOscuro: #A18B70;
+    
+    --complementario: #D99A4C;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--celeste);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(90%, 200rem);
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.header {
+    background-image: url(../img/header.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo_nombre_light {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.nav-link {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.nav-link:nth-child(5) {
+    background-color: rgb(255 255 255 / 50% );
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.contenido {
+    margin: 0 auto;
+    width: 100rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+
+.info-nosotros {
+    background-color: rgb(255 255 255 / 50% );
+    border-radius: 2rem;
+    padding: 4rem;
+    height: 45rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.info-nosotros p{
+    text-align: justify;
+    line-height: 3rem;
+}
+
+.info-sucursales {
+    background-color: rgb(255 255 255 / 50% );
+    border-radius: 2rem;
+    padding: 4rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    gap: 1rem;
+}
+
+.info-sucursales h2 {
+    margin-bottom: 3rem;
+}
+
+.sucursal1 {
+    margin-bottom: 3rem;
+    background-image: url(../img/cafeteria1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sucursal2 {
+    
+    background-image: url(../img/cafeteria2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sucursal1, .sucursal2 {
+    height: 13rem;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.redes-fb {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-ins {
+    color: #fff;
+    cursor: pointer;
+}
+
+.derechos {
+    margin-bottom: 0;
+    color: #fff;
+}

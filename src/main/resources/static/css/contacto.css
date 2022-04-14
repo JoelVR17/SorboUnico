@@ -1,0 +1,171 @@
+:root {
+    --azul: #608BA1;
+    --celeste: #BEDDED;
+    --cafeClaro: #FFF4E6;
+    --cafeMedio: #EDD8BE;
+    --cafeOscuro: #A18B70;
+    
+    --complementario: #D99A4C;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--celeste);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(90%, 200rem);
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.header {
+    background-image: url(../img/header.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo_nombre_light {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.nav-link {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.nav-link:nth-child(4) {
+    background-color: rgb(255 255 255 / 50% );
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255 255 255 / 50% );
+    width: 50rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 4rem;
+    margin-top: 7rem;
+    font-size: 2rem;
+    box-shadow: 0px 10px 15px 0px rgba(71,71,71,0.6);
+}
+
+.info-telefono {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-telefono p {
+    background-color: white;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.info-email p {
+    background-color: white;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.info-horario p {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.info-email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    
+}
+
+.info-horario {
+
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.redes-fb {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-ins {
+    color: #fff;
+    cursor: pointer;
+}
+
+.derechos {
+    margin-bottom: 0;
+    color: #fff;
+}

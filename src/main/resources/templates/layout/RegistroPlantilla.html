@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
-      xmlns:sec="http://thymeleaft.org/extras/spring-security"
-      lang="en">
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorbo Único</title>
-        <meta charset="UTF-8"/>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR89SHOvwoVDlCmppl0YaLzRiD_yqNyGFeyyA&usqp=CAU"/>
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
-        
-        <script src="https://kit.fontawesome.com/850c2e9361.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/loginyRegistro.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
-<body style="top: 0%">
+<body>
 
     <main th:fragment="main" class="contenedor">
         <aside class="aside">
             <div class="logo">
-                <img class="logo__imagen" src="img/logo.png" alt="Logo">
+                <img class="logo__imagen" src="img/logo.jpeg" alt="Logo">
             </div>
-                <h1 class="aside__titulo"><span class="aside__titulo--delgado" th:text="#{registro.sorbo}"></span><b th:text="#{registro.unico}"></b></h1>
+                <h1 class="aside__titulo"><span class="aside__titulo--delgado">Sorbo</span><b>Único</b></h1>
         </aside>
 
         <section class="principal">
             <div class="principal__contenido">
-                <h2 class="principal__titulo" th:text="#{registro.creaC}"></h2>
 
                 <form class="formulario">
                     <div class="campo">
-                        <label class="campo__label" for="nombre" th:text="#{registro.nombre}"></label>
-                        <input class="campo__field" type="text" placeholder="Wilberth" id="nombre">
+                        <label class="campo__label" for="nombre">Nombre:</label>
+                        <input class="campo__field" type="text" placeholder="Tu nombre." id="nombre">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="email"th:text="#{registro.email}"></label>
-                        <input class="campo__field" type="email" id="email" placeholder="wilberth22gmail.com">
+                        <label class="campo__label" for="email">Email:</label>
+                        <input class="campo__field" type="email" id="email" placeholder="Tu email.">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="contrasena"th:text="#{registro.contrasenna}">:</label>
-                        <input class="campo__field" type="password" id="contrasena" placeholder="*********">
+                        <label class="campo__label" for="contrasena">Contraseña:</label>
+                        <input class="campo__field" type="password" id="contrasena" placeholder="Tu contraseña.">
                     </div>
 
                     <div class="campo">
-                        <button class="campo__boton" type="button" value="Registrarse" onclick="location.href = '/Index'" th:text="#{registro.registrarse}"></button>>
+                        <input class="campo__boton" type="button" value="Registrarse" onclick="location.href='principal.html'">
                     </div>
                     
-                    <p class="formulario__texto">¿Ya tienes cuenta? <a href="/log">Inicia sesión</a></p>
+                    <p class="formulario__texto">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
                 </form>
             </div>
         </section>
