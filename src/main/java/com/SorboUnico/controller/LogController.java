@@ -17,4 +17,9 @@ public class LogController {
         return "Login";
     }
     
+    @GetMapping("/Registro")
+    public String registro(){
+        
+        return "Registro";
+    }
 }
