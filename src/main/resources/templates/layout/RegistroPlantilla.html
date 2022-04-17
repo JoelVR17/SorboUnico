@@ -24,28 +24,29 @@
 
         <section class="principal">
             <div class="principal__contenido">
+                <h2 class="principal__titulo" th:text="#{registro.creaC}"></h2>
 
                 <form class="formulario">
                     <div class="campo">
-                        <label class="campo__label" for="nombre">Nombre:</label>
-                        <input class="campo__field" type="text" placeholder="Tu nombre." id="nombre">
+                        <label class="campo__label" for="nombre" th:text="#{registro.nombre}"></label>
+                        <input class="campo__field" type="text" placeholder="Wilberth" id="nombre" maxlength="25">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="email">Email:</label>
-                        <input class="campo__field" type="email" id="email" placeholder="Tu email.">
+                        <label class="campo__label" for="email" th:text="#{registro.email}"></label>
+                        <input class="campo__field" type="email" id="email" placeholder="wilberth@gmail.com" maxlength="25" minlength="12">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="contrasena">Contraseña:</label>
-                        <input class="campo__field" type="password" id="contrasena" placeholder="Tu contraseña.">
+                        <label class="campo__label" for="contrasena" th:text="#{registro.contrasenna}"></label>
+                        <input class="campo__field" type="password" id="contrasena" placeholder="12345" maxlength="25" minlength="12">
                     </div>
 
                     <div class="campo">
-                        <input class="campo__boton" type="button" value="Registrarse" onclick="location.href='principal.html'">
+                        <bottom th:text="#{registro.boton}" style="text-align: center"  class="campo__boton" type="button" value="Registrarse" onclick="location.href='/'">
                     </div>
                     
-                    <p class="formulario__texto">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+                    <p class="formulario__texto">¿Ya tienes cuenta? <a href="/Login">Inicia sesión</a></p>
                 </form>
             </div>
         </section>

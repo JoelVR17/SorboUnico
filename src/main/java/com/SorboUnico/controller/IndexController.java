@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class IndexController {
     
-    @GetMapping("/Index")
+    @GetMapping("/")
     public String inicio(){
         
         log.info("Estamos usando Spring");

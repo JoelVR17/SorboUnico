@@ -75,12 +75,27 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
-.nav-link:nth-child(3) {
-    background-color: rgb(255 255 255 / 50% );
-    padding: .5rem;
-    border-radius: 1rem;
-    font-weight: bold;
+.nav-link:hover {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 1.7px solid #0016b0;
+    border-color: white;
+    transition: 0.3s;
 }
+
+.nav-linkSelec {
+    padding: 2rem;
+    font-size: 2.3rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 1.7px solid #0016b0;
+    border-color: white;
+    transition: 0.5s;
+}
+
 
 .reservas {
     display: flex;
@@ -110,7 +125,7 @@ h1, h2, h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--celeste);
+    background-color: white;
     box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
     font-size: 2.5rem;
     font-weight: bold;
@@ -161,7 +176,7 @@ h1, h2, h3 {
 /* Footer */
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     text-align: center;
     display: flex;
@@ -175,12 +190,23 @@ h1, h2, h3 {
 }
 
 .redes-fb {
+    color: black;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-fb:hover {
     color: #fff;
     cursor: pointer;
     margin-right: 1rem;
 }
 
 .redes-ins {
+    color: black;
+    cursor: pointer;
+}
+
+.redes-ins:hover {
     color: #fff;
     cursor: pointer;
 }

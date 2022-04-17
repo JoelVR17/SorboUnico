@@ -24,24 +24,25 @@
 
         <section class="principal">
             <div class="principal__contenido">
-                <h2 class="principal__titulo">¡Bienvenido!</h2>
+                <h2 class="principal__titulo" th:text="#{login.bienvenido}"></h2>
 
-                <form class="formulario">
+                <form class="formulario"
+                      method="POST"
+                      th:action="@{/Login}">
                     <div class="campo">
-                        <label class="campo__label" for="usuario">Usuario:</label>
-                        <input class="campo__field" type="text" placeholder="Tu usuario." id="usuario">
+                        <label class="campo__label" for="username" th:text="#{login.email}"></label>
+                        <input class="campo__field" type="text" placeholder="wilberth@gmail.com" name="username" id="username" maxlength="25" minlength="12">
                     </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="contrasena">Contraseña:</label>
-                        <input class="campo__field" type="password" id="contrasena" placeholder="Tu contraseña">
+                        <label class="campo__label" for="password" th:text="#{login.contrasenna}"></label>
+                        <input class="campo__field" type="password" id="password" name="password" placeholder="profe100" maxlength="25" minlength="5">
                     </div>
 
-                    <div class="campo">
-                        <input class="campo__boton" type="button" value="Ingresar" onclick="location.href= 'principal.html'">
-                    </div>
-
-                    <p class="formulario__texto">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+                    <div class="campo" >
+                        <button th:text="#{login.boton}" style="text-align: center" class="campo__boton" type="submit" value="Login">
+                    </div>                                                                                     
+                    
                 </form>
             </div>
         </section>

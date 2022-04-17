@@ -18,17 +18,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("USERPREMIUN", "USER")
                 .and()
                 .withUser("user@gmail.com")
-                .password("{noop}12345")
+                .password("{noop}abcdef")
                 .roles("USER");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/Login/","/MenuPlantilla/","/Perfil/","/Principal/","/Registro/") //TODOS
+                .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto","/Reserva") //TODOS
                 .hasRole("USERPREMIUN")
                 
-                .antMatchers("/Login/","/MenuPlantilla/","/Principal/","/Registro/") //PONER TODOS MENOS RESERVAS
+                .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto") //PONER TODOS MENOS RESERVAS
+                .hasAnyRole("USERPREMIUN", "USER")
+                
+                .antMatchers("/")
                 .hasAnyRole("USERPREMIUN", "USER")
                 
                 .and()

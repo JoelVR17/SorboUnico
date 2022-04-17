@@ -2,99 +2,100 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-    <title>Sorbo Único</title>
-    <script type="text/javascript" id="rda-calendar" src="https://www.reservasporinternet.com/webmaster/widget/calendar/hotel-business/hotel-business-calendar.js" data-company="XXXX" data-target="calendar" data-language="es" data-type="inline" data-color="345678"></script> 
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reserva.css">
-    <link rel="stylesheet" href="css/normalize.css">
-</head>
-<body>
-    <header th:fragment="header" class="header">
-        <div class="contenedor"> 
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+                        <title>Sorbo Único</title>
+                        <script type="text/javascript" id="rda-calendar" src="https://www.reservasporinternet.com/webmaster/widget/calendar/hotel-business/hotel-business-calendar.js" data-company="XXXX" data-target="calendar" data-language="es" data-type="inline" data-color="345678"></script> 
+                        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+                        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+                            <link rel="stylesheet" href="css/reservas.css">
+                                <link rel="stylesheet" href="css/normalize.css">
+                                    </head>
+                                    <body>
+                                        <header th:fragment="header" class="header">
+                                            <div class="contenedor"> 
 
-            <div class="barra-nav contenedor">
-                <a class="logo" href="principal.html"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
-                <nav class="nav">
-                    <a class="nav-link" href="perfil.html">Mi perfil</a>
-                    <a class="nav-link" href="menu.html">Menú</a>
-                    <a class="nav-link" href="reservas.html">Reservas</a>
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
-                </nav>
-            </div>
-        </div>         
-    </header>
+                                                <div class="barra-nav contenedor">
+                                                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
+                                                    <nav class="nav">
+                                                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
+                                                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
+                                                        <a class="nav-linkSelec" href="/Reserva" th:text="#{menu.reservas}"></a>
+                                                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
+                                                        <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                                                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                                    </nav>
+                                                </div>
+                                            </div>         
+                                        </header>
 
-    <main th:fragment="main" class="contenedor contenido">
+                                        <main th:fragment="main" class="contenedor contenido">
 
-        <div class="reservas">
-            <div class="mesas">
-                <fieldset class="mesas-radio">
+                                            <div class="reservas">
+                                                <div class="mesas">
+                                                    <fieldset class="mesas-radio">
 
-                    <div class="mesa1">
-                        <label for="mesa1">Mesa 1</label>
-                        <input type="radio" name="mesa" value="Mesa #1" id="mesa1">
-                    </div>
+                                                        <div class="mesa1">
+                                                            <label for="mesa1" th:text="#{reserva.mesa1}"></label>
+                                                            <input type="radio" name="mesa" value="Mesa #1" id="mesa1">
+                                                        </div>
 
-                    <div class="mesa2">
-                        <label for="mesa2">Mesa 2</label>
-                        <input type="radio" name="mesa" id="mesa2">
-                    </div>
+                                                        <div class="mesa2">
+                                                            <label for="mesa2" th:text="#{reserva.mesa2}"></label>
+                                                            <input type="radio" name="mesa" id="mesa2">
+                                                        </div>
 
-                    <div class="mesa3">
-                        <label for="mesa3">Mesa 3</label>
-                        <input type="radio" name="mesa" value="Mesa #1" id="mesa3">
-                    </div>
+                                                        <div class="mesa3">
+                                                            <label for="mesa3" th:text="#{reserva.mesa3}"></label>
+                                                            <input type="radio" name="mesa" value="Mesa #1" id="mesa3">
+                                                        </div>
 
-                    <div class="mesa4">
-                        <label for="mesa4">Mesa 4</label>
-                        <input type="radio" name="mesa" value="Mesa #1" id="mesa4">
-                    </div>
+                                                        <div class="mesa4">
+                                                            <label for="mesa4" th:text="#{reserva.mesa4}"></label>
+                                                            <input type="radio" name="mesa" value="Mesa #1" id="mesa4">
+                                                        </div>
 
-                    <div class="mesa5">
-                        <label for="mesa5">Mesa 5</label>
-                        <input type="radio" name="mesa" value="Mesa #1" id="mesa5">
-                    </div>
+                                                        <div class="mesa5">
+                                                            <label for="mesa5" th:text="#{reserva.mesa5}"></label>
+                                                            <input type="radio" name="mesa" value="Mesa #1" id="mesa5">
+                                                        </div>
 
-                    <div class="mesa6">
-                        <label for="mesa6">Mesa 6</label>
-                        <input type="radio" name="mesa" value="Mesa #1" id="mesa6">
-                    </div>                   
-                </fieldset>
-            </div>
+                                                        <div class="mesa6">
+                                                            <label for="mesa6" th:text="#{reserva.mesa6}"></label>
+                                                            <input type="radio" name="mesa" value="Mesa #1" id="mesa6">
+                                                        </div>                   
+                                                    </fieldset>
+                                                </div>
 
-            <div class="horarios">
-                <fieldset class="horarios-inputs">
-                    <div class="fecha">
-                        <label for="fecha">Fecha</label>
-                        <input type="date" id="fecha">
-                    </div>
-                    <div class="hora">
-                        <label for="hora">Hora</label>
-                        <input type="time" name="hora" id="hora">
-                    </div>
-                </fieldset>
-                <button class="reserva-btn">Reservar</button>
-            </div>
-        </div>
-        
-        
-    </main>
+                                                <div class="horarios">
+                                                    <fieldset class="horarios-inputs">
+                                                        <div class="fecha">
+                                                            <label for="fecha" th:text="#{reserva.fecha}"></label>
+                                                            <input type="date" id="fecha">
+                                                        </div>
+                                                        <div class="hora">
+                                                            <label for="hora" th:text="#{reserva.hora}"></label>
+                                                            <input type="time" name="hora" id="hora">
+                                                        </div>
+                                                    </fieldset>
+                                                    <button class="reserva-btn" th:text="#{reserva.reservar}"></button>
+                                                </div>
+                                            </div>
 
-    <footer th:fragment="footer" class="footer">
-        <div class="redes">
-            <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href='https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
-            <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href='https://www.instagram.com/sorbo.unico/'"></i>
-        </div>
 
-        <p class="derechos">Todos los derechos reservados. Sorbo Único &COPY;</p>
-    </footer>
+                                        </main>
 
-</body>
-</html>
+                                        <footer th:fragment="footer" class="footer">
+                                            <div class="redes">
+                                                <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                                                <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+                                            </div>
+
+                                            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+                                        </footer>
+
+                                    </body>
+                                    </html>

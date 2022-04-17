@@ -2,86 +2,108 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-    <title>Sorbo Único</title>
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/normalize.css">
-</head>
-<body>
-    <header th:fragment="header" class="header">
-        <div class="contenedor"> 
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+                        <title>Sorbo Único</title>
+                        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+                        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+                            <link rel="stylesheet" href="css/menu.css">
+                                <link rel="stylesheet" href="css/normalize.css">
+                                    </head>
+                                    <body>
+                                        <header th:fragment="header" class="header">
+                                            <div class="contenedor"> 
 
-            <div class="barra-nav contenedor">
-                <a class="logo" href="principal.html"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
-                <nav class="nav">
-                    <a class="nav-link" href="perfil.html">Mi perfil</a>
-                    <a class="nav-link" href="menu.html">Menú</a>
-                    <a class="nav-link" href="reservas.html">Reservas</a>
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                    <a class="nav-link" href="nosotros.html">Nosotros</a>
-                </nav>
-            </div>
-        </div>         
-    </header>
+                                                <div class="barra-nav contenedor">
+                                                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
+                                                    <nav class="nav">
+                                                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
+                                                        <a class="nav-linkSelec" href="/Menu" th:text="#{menu.menu}"></a>
+                                                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
+                                                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
+                                                        <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                                                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                                    </nav>
+                                                </div>
+                                            </div>         
+                                        </header>
 
-    <main th:fragment="main">
-        <div class="busqueda">
-            <form class="barra-busqueda" action="#">
-                <input class="busqueda-input" type="text" name="search" placeholder="Busca tu producto.">
-                <button class="busqueda-button">
-                    <img src="img/search.png" alt="busqueda">
-                </button>
-            </form>
-        </div>
-        
-        <section class="productos">
-            <div class="producto">
-                <h2 class="producto-nombre">Espresso</h2>
-                
-                <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
-            </div>
+                                        <main th:fragment="main">
+                                            <div class="busqueda">
+                                                <form class="barra-busqueda" action="#">
+                                                    <input class="busqueda-input" type="text" name="search" placeholder="Busca tu producto"/> <!-- NO SE PUEDE POR SER PLACEHOLDER -->
+                                                        <button class="busqueda-button">
+                                                            <img src="img/search.png" alt="busqueda">
+                                                        </button>
+                                                </form>
+                                            </div>
 
-            <div class="producto">
-                <h2 class="producto-nombre">Capuccino</h2>
-                <img class="producto-img" src="img/capuchino.jpg" alt="Capuchino">
-            </div>
+                                            <section class="productos">
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre">Espresso</h2>
 
-            <div class="producto">
-                <h2 class="producto-nombre">Cold Brew</h2>
-                <img class="producto-img" src="img/coldbrew.jpg" alt="Cold Brew">
-            </div>
+                                                    <img class="producto-img" src="img/Espresso.jpg" alt="Espresso">
 
-            <div class="producto">
-                <h2 class="producto-nombre">Queque de zanahoria</h2>
-                <img class="producto-img" src="img/zanahoria.jpg" alt="Queque de Zanahoria">
-            </div>
+                                                        <b><p class="precio">₡2.400</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
 
-            <div class="producto">
-                <h2 class="producto-nombre">Cheesecake</h2>
-                <img class="producto-img" src="img/cheesecake.jpg" alt="Cheesecake">
-            </div>
+                                                </div>
 
-            <div class="producto">
-                <h2 class="producto-nombre">Queque de chocolate</h2>
-                <img class="producto-img" src="img/chocolate.jpg" alt="Queque de chocolate">
-            </div>
-        </section>
-    </main>
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre">Capuccino</h2>
+                                                    <img class="producto-img" src="img/capuchino.jpg" alt="Capuchino">
+                                                        <b><p class="precio">₡2.200</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
+                                                </div>
 
-    <footer th:fragment="footer" class="footer">
-        <div class="redes">
-            <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href='https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
-            <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href='https://www.instagram.com/sorbo.unico/'"></i>
-        </div>
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre">Cold Brew</h2>
+                                                    <img class="producto-img" src="img/coldbrew.jpg" alt="Cold Brew">
+                                                        <b><p class="precio">₡3.500</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
+                                                </div>
 
-        <p class="derechos">Todos los derechos reservados. Sorbo Único &COPY;</p>
-    </footer>
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre" th:text="#{menuP.qqz}"></h2>
+                                                    <img class="producto-img" src="img/zanahoria.jpg" alt="Queque de Zanahoria">
+                                                        <b><p class="precio">₡2.000</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
+                                                </div>
 
-</body>
-</html>
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre">Cheesecake</h2>
+                                                    <img class="producto-img" src="img/cheesecake.jpg" alt="Cheesecake">
+                                                        <b><p class="precio">₡2.000</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
+                                                </div>
+
+                                                <div class="producto">
+                                                    <h2 class="producto-nombre" th:text="#{menuP.qqc}"></h2>
+                                                    <img class="producto-img" src="img/chocolate.jpg" alt="Queque de chocolate">
+                                                        <b><p class="precio">₡3.100</p></b>
+                                                        <a><i class="fa-solid fa-share"></i></a>
+                                                        <a><i class="fa-solid fa-heart"></i></a>
+
+                                                </div>
+                                            </section>
+                                        </main>
+
+                                        <footer th:fragment="footer" class="footer">
+                                            <div class="redes">
+                                                <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                                                <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+                                            </div>
+
+                                            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+                                        </footer>
+
+                                    </body>
+                                    </html>

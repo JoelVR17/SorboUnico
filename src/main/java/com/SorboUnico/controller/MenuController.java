@@ -20,8 +20,31 @@ public class MenuController {
     public String menu(){
         
         log.info("Estamos usando Spring");
-        return "MenuPlantilla";
+        return "Menu";
         
     }
     
+    @GetMapping("/Reserva")
+    public String reserva(){
+        
+        log.info("Estamos usando Spring");
+        return "Reserva";
+        
+    }
+    
+    @GetMapping("/Contacto")
+    public String contacto(){
+        
+        log.info("Estamos usando Spring");
+        return "Contacto";
+        
+    }
+    
+    @GetMapping("/Nosotros")
+    public String nosotros(){
+        
+        log.info("Estamos usando Spring");
+        return "Nosotros";
+        
+    }
 }

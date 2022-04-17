@@ -11,27 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class LogController {
     
-    @GetMapping("/")
-    public String inicio(){
-        
-        return "Login";
-        
-    }
-    
-    @GetMapping("/Registro")
-    public String registro(){
-        
-        return "Registro";
-    }
-    
-    @GetMapping("/log")
+    @GetMapping("/Login")
     public String inicioSesion(){
-        
-        return "Login";
-    }
-    
-    @GetMapping("/logOut")
-    public String logOut(){
         
         return "Login";
     }
