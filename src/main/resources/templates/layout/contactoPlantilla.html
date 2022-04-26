@@ -34,43 +34,48 @@
                                         </header>
 
                                         <main th:fragment="main" class="contenido">
-                                            <div class="info">
-                                                <div class="info-telefono">
-                                                    <h3 th:text="#{contacto.tel}"></h3>
-                                                    <p>2555-5555</p>
+                                            <div class="contenido-contacto">
+                                                <div class="info">
+                                                    <div class="info-telefono">
+                                                        <h3 th:text="#{contacto.tel}"></h3>
+                                                        <p>2555-5555</p>
+                                                    </div>
+                                                    <div class="info-email">
+                                                        <h3>Email:</h3>
+                                                        <p>sorbounico@gmail.com</p>
+                                                    </div>
+                                                    <div class="info-horario">
+                                                        <h3 th:text="#{contacto.HA}"></h3>
+                                                        <p th:text="#{contacto.sem}"></p>
+                                                    </div>
                                                 </div>
-                                                <div class="info-email">
-                                                    <h3>Email:</h3>
-                                                    <p>sorbounico@gmail.com</p>
-                                                </div>
-                                                <div class="info-horario">
-                                                    <h3 th:text="#{contacto.HA}"></h3>
-                                                    <p th:text="#{contacto.sem}"></p>
+
+                                                <div class="cuadro_mapa">
+
+                                                    <iframe 
+                                                        class="mapa_ubi"
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19805.96090310567!2d-84.04682071164731!3d9.933919584292111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1650068880231!5m2!1ses!2scr" 
+                                                        allowfullscreen="" 
+                                                        loading="lazy" 
+                                                        referrerpolicy="no-referrer-when-downgrade">
+                                                    </iframe>
+
                                                 </div>
                                             </div>
 
-                                            <div class="cuadro_mapa">
-
-                                                <iframe 
-                                                    class="mapa_ubi"
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19805.96090310567!2d-84.04682071164731!3d9.933919584292111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f47ea4ff37%3A0x7a7818a6a9e5c90c!2sUniversidad%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1650068880231!5m2!1ses!2scr" 
-                                                    allowfullscreen="" 
-                                                    loading="lazy" 
-                                                    referrerpolicy="no-referrer-when-downgrade">
-                                                </iframe>
-
-                                            </div>
                                         </main>
 
                                         <footer th:fragment="footer" class="footer">
-                                            <div class="redes">
-                                                <i class="fa-brands fa-facebook-f fa-2x redes-fb"
-                                                   onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
-                                                <i class="fa-brands fa-instagram fa-2x redes-ins"
-                                                   onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
-                                            </div>
+                                            <div class="contenido-footer">
+                                                <div class="redes">
+                                                    <i class="fa-brands fa-facebook-f fa-2x redes-fb"
+                                                       onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                                                    <i class="fa-brands fa-instagram fa-2x redes-ins"
+                                                       onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+                                                </div>
 
-                                            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+                                                <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+                                            </div>
                                         </footer>
 
                                     </body>

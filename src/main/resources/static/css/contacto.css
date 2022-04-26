@@ -69,15 +69,6 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
-.mapa_ubi {
-    
-    position: absolute;
-    width:400px; 
-    height:300px;
-    transform: translateY(-100%);
- 
-}
-
 .nav-link {
     padding: 2rem;
     font-size: 2rem;
@@ -157,8 +148,26 @@ h1, h2, h3 {
     
 }
 
-.info-horario {
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
 
+.contenido-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 4rem 0 0 0;
+}
+
+.mapa_ubi{
+    width: 50rem;
+    height: 30rem;
+    margin: 7.5rem 0 0 0;
 }
 
 /* Footer */
@@ -176,6 +185,7 @@ h1, h2, h3 {
     padding: 2rem 0 0 0;
     font-size: 1.5rem;
 }
+
 .redes-fb {
     color: black;
     cursor: pointer;

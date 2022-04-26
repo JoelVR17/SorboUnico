@@ -142,6 +142,7 @@ h1, h2, h3 {
 }
 
 .producto {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,6 +161,58 @@ h1, h2, h3 {
     margin-bottom: 2rem;
     width: 25rem;
     border-radius: 1rem;
+}
+
+.share {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 3px 5px rgba(0 0 0 / 30%);
+}
+
+.heart {
+    position: absolute;
+    top: 300px;
+    right: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 3px 5px rgba(0 0 0 / 30%);
+}
+
+.share:hover {
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+.fa-share {
+    color: black;
+}
+
+.fa-share:hover {
+    color: white;
+}
+
+.heart:hover {
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+.fa-heart {
+    color: black;
+}
+
+.fa-heart:hover {
+    color: white;
 }
 
 /* Footer */

@@ -11,7 +11,7 @@
 /*Galeria de imagenes*/
 .container {
 
-    
+    top: 15rem;
     width: 100%;
     margin: auto;
     height: 550px;
