@@ -1,0 +1,490 @@
+:root {
+    --azul: #608BA1;
+    --celeste: #BEDDED;
+    --cafeClaro: #FFF4E6;
+    --cafeMedio: #EDD8BE;
+    --cafeOscuro: #A18B70;
+    
+    --complementario: #D99A4C;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--celeste);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(90%, 200rem);
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.header {
+    background-image: url(../img/header.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo_nombre_light {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.nav-link {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+.nav-link:hover {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 1.7px solid #0016b0;
+    border-color: white;
+    transition: 0.3s;
+}
+
+.nav-linkB {
+    padding: 2rem;
+    width: 35px;
+    height: 25px;
+}
+
+.nav-linkB:hover {
+    padding: 2rem;
+    width: 38px;
+    height: 25px;
+}
+
+.desple {
+    
+    display: none;
+    
+}
+
+.desple:hover {
+    
+    display: block;
+    
+}
+
+.nav-linkSelec {
+    padding: 2rem;
+    font-size: 2.3rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 1.7px solid #0016b0;
+    border-color: white;
+    transition: 0.5s;
+}
+
+
+.contenido {
+    margin: 0 auto;
+}
+
+.usuario {
+    width: 25rem;
+    height: 25rem;
+    border: 1rem solid var(--azul);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -15rem auto 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+.usuario-img {
+    width: 100%;
+}
+
+.editar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editar-btn {
+    border-style: none;
+    padding: 1rem;
+    margin: 0 0 2rem;
+    border-radius: 1rem;
+    background-color: var(--azul);
+    color: white;
+    cursor: pointer;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    height: 30rem;
+}
+
+.productos-favoritos, .mi-informacion {
+    background-color: rgb(255 255 255 / 80% );
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+}
+
+/* Footer */
+
+.footer {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.redes-fb {
+    color: black;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-fb:hover {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.redes-ins {
+    color: black;
+    cursor: pointer;
+}
+
+.redes-ins:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.derechos {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+/*TABLA*/
+
+table {
+    
+  table-layout: fixed;
+  margin: 110px auto;
+  width: 950px;
+  border-collapse: collapse;
+  border: 3px solid black;
+  
+  
+}
+
+th {
+    
+    background-color: var(--azul);
+    border: 3px solid black;
+    color: white;
+    
+}
+
+td {
+    
+    text-align: center;
+    color: black;
+    border: 3px solid black;
+    background-color: rgb(255 255 255 / 50% );
+    
+}
+
+th, td {
+  padding: 10px;
+}
+
+.reserva-btn {
+    
+    margin: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 70px;
+    height: 50px;
+    background-color: #006400;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+    align-content: center;
+    left: 600px
+    
+}
+
+#lapiz {
+    
+    color: black;
+    
+}
+
+#lapiz:hover {
+    
+    color: green;
+    
+}
+
+#basurero {
+    
+    color: black;
+    
+}
+
+#basurero:hover {
+    
+    color: red;
+    
+}
+
+/*CREAR / EDITAR = CLIENTE*/
+
+.contenedorF {
+    
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;        
+    justify-content: center;
+    
+}
+
+.main {
+    
+    transform: translateY(-45%);
+    width: 950px;
+    margin: 0 auto;
+    
+}
+
+.guardar {
+    
+    margin: 0 auto;
+    width: 150px; 
+    height: 50px;
+    transform: translateY(-70%);
+    
+}
+
+.guardar:hover {
+    
+    margin: 0 auto;
+    transform: translateY(-70%);
+    
+}
+
+.guarda{
+    
+    width: 150px; 
+    height: 50px;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+    margin: 0 auto; 
+    float:left;
+    text-align: center;
+    font-size: 30px
+    
+}
+
+.guarda:hover{
+    
+    background-color: var(--complementario);
+    
+}
+
+.reserva-btn {
+    margin: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 150px; 
+    height: 50px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+}
+
+.reserva-btn:hover {
+    background-color: var(--complementario);
+}
+
+.botonesY {
+    
+    display: flex; 
+    height: 80px; 
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    transform: translateY(-50%);
+        
+}
+
+.vacia{
+    
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+    transform: translateY(60%);
+    
+}
+
+.bloqueV {
+    
+    width: 400px;
+    height: 100px;
+    background-color: var(--azul);
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    line-height: 90px;
+    
+}
+
+.ventaT {
+    
+    width: 200px;
+    height: 100px;
+    transform: translateY(185%);
+    
+}
+
+#ventaTT {
+    
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    opacity: 1;
+    transform: translateY(185%);
+
+}
+
+.ventaT:hover {
+    
+    width: 200px;
+    height: 100px;
+    transform: translateY(185%);
+    opacity: 0;
+    
+}
+
+.reserva-btnV {
+    
+    margin: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 200px; 
+    height: 70px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+    line-height: 50px;
+    
+}
+
+.Cant {
+    
+    width: 200px;
+    height: 100px;
+    transform: translateY(185%);
+    
+}
+
+.Cant:hover {
+    
+    width: 200px;
+    height: 100px;
+    transform: translateY(185%);
+    opacity: 0;
+    
+}
+
+.reserva-btnC {
+    
+    margin: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 200px; 
+    height: 70px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px -5px rgba(71,71,71,0.6);
+    cursor: pointer;
+    line-height: 50px;
+    
+}
+

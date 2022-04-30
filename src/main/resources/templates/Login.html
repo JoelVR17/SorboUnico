@@ -2,20 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorbo Único</title>
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/loginyRegistro.css">
-    <link rel="stylesheet" href="css/normalize.css">
-</head>
-<body>
+    <head th:replace="layout/LoginPlantilla :: headLR">
 
-    <main th:replace="layout/loginPlantilla :: main">
+    </head>
+    
+    <body>
+        <main th:replace="layout/loginPlantilla :: main">
 
-    </main>
-</body>
+        </main>
+    </body>
+    
 </html>

@@ -2,16 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorbo Único</title>
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/loginyRegistro.css">
-    <link rel="stylesheet" href="css/normalize.css">
-</head>
+<head th:fragment="headR" >
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+        <title>Sorbo Único</title>
+        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="css/loginyRegistro.css" rel="stylesheet" type="text/css"/>
+
+    </head>
 <body>
 
     <main th:fragment="main" class="contenedor">
@@ -46,7 +49,10 @@
                         <bottom th:text="#{registro.boton}" style="text-align: center"  class="campo__boton" type="button" value="Registrarse" onclick="location.href='/'">
                     </div>
                     
-                    <p class="formulario__texto">¿Ya tienes cuenta? <a href="/Login">Inicia sesión</a></p>
+                    <div style="display: flex; left: 230px; position: relative">
+                        <p class="formulario__texto" th:text="#{registro.registroNoCuenta}"></p> 
+                        <a th:text="#{registro.registrarse}" href="/Login"></a>
+                    </div>
                 </form>
             </div>
         </section>

@@ -13,6 +13,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
+                .withUser("superAdmin@gmail.com")
+                .password("{noop}admin")
+                .roles("ADMIN","USERPREMIUN", "USER")
+                .and()
                 .withUser("userP@gmail.com")
                 .password("{noop}12345")
                 .roles("USERPREMIUN", "USER")
@@ -25,14 +29,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto","/Reserva") //TODOS
-                .hasRole("USERPREMIUN")
+                
+                .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto","/Reserva","/Clientes") //TODOS
+                .hasRole("ADMIN")
+                
+                .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto","/Reserva") //TODOS MENOS CLIENTES
+                .hasAnyRole("USERPREMIUN","ADMIN")
                 
                 .antMatchers("/Menu","/Perfil","/Nosotros","/Contacto") //PONER TODOS MENOS RESERVAS
-                .hasAnyRole("USERPREMIUN", "USER")
+                .hasAnyRole("USERPREMIUN", "USER", "ADMIN")
                 
                 .antMatchers("/")
-                .hasAnyRole("USERPREMIUN", "USER")
+                .hasAnyRole("USERPREMIUN", "USER", "ADMIN")
                 
                 .and()
                 .formLogin()

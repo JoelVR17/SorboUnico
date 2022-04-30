@@ -3,7 +3,7 @@
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
 
-    <head>
+    <head th:fragment="headC">
         <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,9 @@
                                                         <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
                                                         <a class="nav-linkSelec" href="/Contacto" th:text="#{menu.contacto}"></a>
                                                         <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                                                        <a class="nav-link" href="/cliente/listado" th:text="#{menu.cliente}" sec:authorize="hasRole('ROLE_ADMIN')"></a>
                                                         <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                                        
                                                     </nav>
                                                 </div>
                                             </div>         
@@ -41,7 +43,7 @@
                                                         <p>2555-5555</p>
                                                     </div>
                                                     <div class="info-email">
-                                                        <h3>Email:</h3>
+                                                        <h3>Email</h3>
                                                         <p>sorbounico@gmail.com</p>
                                                     </div>
                                                     <div class="info-horario">

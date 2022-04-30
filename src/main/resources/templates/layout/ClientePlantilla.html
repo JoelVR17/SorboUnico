@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security"> 
+    <head th:fragment="headCli">
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”/>
+        <title>Sorbo Único</title>
+        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="/css/principal.css"/>
+        <link rel="stylesheet" href="/css/normalize.css"/>
+        <link href="/css/cliente.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <header th:fragment="header" class="header">
+            <div class="contenedor"> 
+                <div class="barra-nav contenedor">
+                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
+                    <nav class="nav">
+                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
+                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
+                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
+                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
+                        <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                        <a class="nav-linkSelec" href="/cliente/listado" th:text="#{menu.cliente}" sec:authorize="hasRole('ROLE_ADMIN')"></a>
+                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </nav>
+                </div>
+            </div>         
+        </header>
+
+        <!-- BOTÓN DE AGREGAR -->
+        <div th:fragment="botonesAgregar">
+            <button class="reserva-btn"><a th:href="@{/cliente/nuevo}"><i class="fa-solid fa-plus"></i></a></button>
+        </div>
+
+        <!-- AGREGAR CLIENTE -->
+        <section th:fragment="agregarCliente" style="height: 300px">
+            <form th:action="@{/cliente/guardar}" th:object="${clientes}"
+                  method="POST">
+                <table border="3" cellspacing="1" class="tabla">
+                    <thead>
+                        <tr>
+                            <th th:text="#{cliente.nombre}"><b></b></th>
+                            <th th:text="#{cliente.apellido}"><b></b></th>
+                            <th th:text="#{cliente.cedula}"><b></b></th>
+                            <th th:text="#{cliente.comprado}"><b></b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="text"  name="Nombre" required="true"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="text"  name="Apellido" required="true"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="number" name="Cedula"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="number" name="Comprado" required="true" step="any"/>
+                                    </div>
+                                </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="botonesY">
+                    <div class="guardar" style="width: 150px; height: 50px;">
+                        <a class="guarda" th:href="@{/cliente/listado}"><i class="fa-solid fa-circle-arrow-left"></i></a>
+                    </div>
+                    <div class="guardar">
+                        <button class="guarda" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+                    </div>
+                </div>
+            </form> 
+        </section>
+
+        <!-- EDITAR CLIENTE -->
+        <section th:fragment="editarCliente" style="height: 300px">
+
+            <form method="POST"
+                  th:action="@{/cliente/guardar}"
+                  th:object="${cliente}">
+                <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
+                <table border="3" cellspacing="1" class="tabla">
+                    <thead>
+                        <tr>
+                            <th th:text="#{cliente.nombre}"><b></b></th>
+                            <th th:text="#{cliente.apellido}"><b></b></th>
+                            <th th:text="#{cliente.cedula}"><b></b></th>
+                            <th th:text="#{cliente.comprado}"><b></b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="text"  name="Nombre" required="true" th:field="*{nombre}"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="text"  name="Apellido" required="true" th:field="*{apellido}"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="number" name="Cedula" th:field="*{cedula}"/>
+                                    </div>
+                                </b>
+                            </td>
+                            <td>
+                                <b>
+                                    <div>
+                                        <input type="number" name="Comprado" required="true" step="any" th:field="*{comprado}"/>
+                                    </div>
+                                </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="botonesY">
+                    <div class="guardar" style="width: 150px; height: 50px;">
+                        <a class="guarda" th:href="@{/cliente/listado}"><i class="fa-solid fa-circle-arrow-left"></i></a>
+                    </div>
+                    <div class="guardar">
+                        <button class="guarda" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+                    </div>
+                </div>
+            </form> 
+        </section>
+
+        <!-- MAIN -->
+        <main class="main" th:fragment="listaC">
+
+            <div class="contTabla" th:if="${clientes != null and !clientes.empty}">
+                <table border="3" cellspacing="1" class="tabla">
+                    <thead>
+                        <tr>
+                            <th th:text="#{cliente.id}"><b></b></th>
+                            <th th:text="#{cliente.nombre}"><b></b></th>
+                            <th th:text="#{cliente.apellido}"><b></b></th>
+                            <th th:text="#{cliente.cedula}"><b></b></th>
+                            <th th:text="#{cliente.comprado}"><b></b></th>
+                            <th th:text="#{cliente.actualizar}"><b></b></th>
+                            <th th:text="#{cliente.eliminar}"><b></b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="cliente, contador : ${clientes}">
+                            <td><b>[[${contador.count}]]</b></td>
+                            <td><b>[[${cliente.nombre}]]</b></td>
+                            <td><b>[[${cliente.apellido}]]</b></td>
+                            <td><b>[[${cliente.cedula}]]</b></td>
+                            <td><b>[[${cliente.comprado}]]</b></td>
+                            <td><a th:href="@{/cliente/modificar/}+${cliente.idCliente}"><i id="lapiz" class="fa-solid fa-pencil"></i></a></td>
+                            <td><a th:href="@{/cliente/eliminar/}+${cliente.idCliente}"><i id="basurero" class="fas fa-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+        
+        <div th:fragment="ventaT" id="ventaTT">
+            <div class="reserva-btnV">
+
+                <p><b>Total Comprado</b></p>
+
+            </div>
+        </div>
+        
+        <div th:fragment="ventaT" class="Cant">
+            <div class="reserva-btnC">
+
+                <p><b>[[${new java.text.DecimalFormat('¢#,##0.00').format(compraTotal)}]]</b></p>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer th:fragment="footer" class="footer">
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+            </div>
+
+            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+        </footer>
+
+    </body>
+</html>

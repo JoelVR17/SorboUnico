@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head>
+    <head th:fragment="headP">
         <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
                                                         <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
                                                         <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
                                                         <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
-
+                                                        <a class="nav-link" href="/cliente/listado" th:text="#{menu.cliente}" sec:authorize="hasRole('ROLE_ADMIN')"></a>
                                                         <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
                                                     </nav>
                                                 </div>
@@ -55,13 +55,13 @@
                                                 </div>
                                                 <div class="mi-informacion">
                                                     <h2 class="mi-informacion-titulo" th:text="#{miperfil.masIn}"></h2>
-                                                    <h3>Nombre:</h3>
-                                                    <p>Nombre</p>
-                                                    <h3>Apellido:</h3>
-                                                    <p>Apellido</p>
-                                                    <h3>Correo:</h3>
+                                                    <h3 th:text="#{miperfil.nombre}"></h3>
+                                                    <p>Tailyn</p>
+                                                    <h3 th:text="#{miperfil.apellido}"></h3>
+                                                    <p>Carranza</p>
+                                                    <h3 th:text="#{miperfil.correo}"></h3>
                                                     <p> userP@gmail.com</p>
-                                                    <h3>Teléfono:</h3>
+                                                    <h3 th:text="#{miperfil.tel}"></h3>
                                                     <p>8888-8888</p>
                                                 </div>
                                             </div>

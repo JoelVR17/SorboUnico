@@ -154,6 +154,8 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    height: 600px;
+    transform: translateY(-20%);
 }
 
 .contenido-contacto{
@@ -173,7 +175,7 @@ h1, h2, h3 {
 /* Footer */
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     text-align: center;
     display: flex;

@@ -123,6 +123,8 @@ h1, h2, h3 {
 
 .contenido {
     margin: 0 auto;
+    transform: translateY(10%);
+    height: 600px;
 }
 
 .usuario {
@@ -201,8 +203,8 @@ h1, h2, h3 {
 /* Footer */
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 350px;
     text-align: center;
     display: flex;
     flex-direction: column;

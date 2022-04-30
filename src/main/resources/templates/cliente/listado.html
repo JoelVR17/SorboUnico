@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
+
+    <head th:replace="layout/ClientePlantilla :: headCli">
+       
+    </head>
+
+    <body>
+        
+        <header th:replace="layout/ClientePlantilla :: header" class="header">
+
+        </header>
+        
+        <div th:replace="layout/ClientePlantilla :: botonesAgregar"/>
+        
+        <main th:replace="layout/ClientePlantilla :: listaC">
+
+        </main>
+        
+        <div th:replace="layout/ClientePlantilla :: ventaT"/>
+        
+        <footer th:replace="layout/ClientePlantilla :: footer">
+
+        </footer>
+    </body>
+
+</html>

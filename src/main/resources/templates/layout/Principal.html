@@ -2,143 +2,134 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head>
+    <head th:fragment="head" >
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”/>
+        <title>Sorbo Único</title>
+        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/principal.css"/>
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:fragment="header" class="header">
+            <div class="contenedor"> 
 
+                <div class="barra-nav contenedor">
+                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
+                    <nav class="nav">
+                        <span class="usuarioA" sec:authentication="name"></span><i style="color: white; font-size: 30px" class="fa-solid fa-grip-lines-vertical"></i>
+                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
+                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
+                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
+                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
+                        <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                        <a class="nav-link" href="/cliente/listado" th:text="#{menu.cliente}" sec:authorize="hasRole('ROLE_ADMIN')"></a>
+                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </nav>
+                </div>
+            </div>         
+        </header>
 
-        <!-- PREGUNTAR AL PROFE:
-        
-            En los input no puedo cambiar el idioma = menu
-        
-        -->
+        <!-- SE ESTABLECE EL CONTENIDO PRINCIPAL -->
+        <section th:fragment='slides'>
 
+            <div class="container">
 
-        <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+                <!-- Menu de imagenes -->
+                <ul class="slider">
 
-                        <title>Sorbo Único</title>
-                        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-                        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-                            <link rel="stylesheet" href="css/principal.css">
-                                <link rel="stylesheet" href="css/normalize.css">
-                                    </head>
-                                    <body>
-                                        <header th:fragment="header" class="header">
-                                            <div class="contenedor"> 
+                    <!-- Slide 1 -->
+                    <li id="slide1">
 
-                                                <div class="barra-nav contenedor">
-                                                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
-                                                    <nav class="nav">
-                                                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
-                                                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
-                                                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
-                                                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
-                                                        <a class="nav-link" href="/Nosotros" th:text="#{menu.nosotros}"></a>
-                                                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
-                                                    </nav>
-                                                </div>
-                                            </div>         
-                                        </header>
+                        <img src="../img/slider1.jpg" alt=""/>
 
-                                        <!-- SE ESTABLECE EL CONTENIDO PRINCIPAL -->
-                                        <section th:fragment='slides'>
+                    </li>
 
-                                            <div class="container">
+                    <!-- Slide 2 -->
+                    <li id="slide2">
 
-                                                <!-- Menu de imagenes -->
-                                                <ul class="slider">
+                        <img src="../img/slider2.jpg" alt=""/>
 
-                                                    <!-- Slide 1 -->
-                                                    <li id="slide1">
+                    </li>
 
-                                                        <img src="../img/slider1.jpg" alt=""/>
+                    <!-- Slide 3 -->
+                    <li id="slide3">
 
-                                                    </li>
+                        <img src="../img/slider3.jpg" alt=""/>
 
-                                                    <!-- Slide 2 -->
-                                                    <li id="slide2">
+                    </li>
 
-                                                        <img src="../img/slider2.jpg" alt=""/>
+                    <!-- Slide 4 -->
+                    <li id="slide4">
 
-                                                    </li>
+                        <img src="../img/slider4.jpg" alt=""/>
 
-                                                    <!-- Slide 3 -->
-                                                    <li id="slide3">
+                    </li>
 
-                                                        <img src="../img/slider3.jpg" alt=""/>
+                    <!-- Slide 5 -->
+                    <li id="slide5">
 
-                                                    </li>
+                        <img src="../img/slider5.jpeg" alt=""/>
 
-                                                    <!-- Slide 4 -->
-                                                    <li id="slide4">
+                    </li>
 
-                                                        <img src="../img/slider4.jpg" alt=""/>
+                </ul>
 
-                                                    </li>
+                <!-- Puntos para cambiar de imagen -->
+                <ul class="menuI">
 
-                                                    <!-- Slide 5 -->
-                                                    <li id="slide5">
+                    <!-- Uno -->
+                    <li>
+                        <a href="#slide1">
+                            <i class="fa-solid fa-1"></i>
+                        </a>
+                    </li>
 
-                                                        <img src="../img/slider5.jpeg" alt=""/>
+                    <!-- Dos -->
+                    <li>
+                        <a href="#slide2">
+                            <i class="fa-solid fa-2"></i>
+                        </a>
+                    </li>
 
-                                                    </li>
+                    <!-- Tres -->
+                    <li>
+                        <a href="#slide3">
+                            <i class="fa-solid fa-3"></i>
+                        </a>
+                    </li>
 
-                                                </ul>
+                    <!-- Cuatro -->
+                    <li>
+                        <a href="#slide4">
+                            <i class="fa-solid fa-4"></i>
+                        </a>
+                    </li>
 
-                                                <!-- Puntos para cambiar de imagen -->
-                                                <ul class="menuI">
+                    <!-- Cinco -->
+                    <li>
+                        <a href="#slide5">
+                            <i class="fa-solid fa-5"></i>
+                        </a>
+                    </li>
 
-                                                    <!-- Uno -->
-                                                    <li>
-                                                        <a href="#slide1">
-                                                            <i class="fa-solid fa-1"></i>
-                                                        </a>
-                                                    </li>
+                </ul>
+            </div>
 
-                                                    <!-- Dos -->
-                                                    <li>
-                                                        <a href="#slide2">
-                                                            <i class="fa-solid fa-2"></i>
-                                                        </a>
-                                                    </li>
+        </section>
 
-                                                    <!-- Tres -->
-                                                    <li>
-                                                        <a href="#slide3">
-                                                            <i class="fa-solid fa-3"></i>
-                                                        </a>
-                                                    </li>
+        <footer th:fragment="footer" class="footer">
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+            </div>
 
-                                                    <!-- Cuatro -->
-                                                    <li>
-                                                        <a href="#slide4">
-                                                            <i class="fa-solid fa-4"></i>
-                                                        </a>
-                                                    </li>
+            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+        </footer>
 
-                                                    <!-- Cinco -->
-                                                    <li>
-                                                        <a href="#slide5">
-                                                            <i class="fa-solid fa-5"></i>
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-
-                                        </section>
-
-
-
-                                        <footer th:fragment="footer" class="footer">
-                                            <div class="redes">
-                                                <i class="fa-brands fa-facebook-f fa-2x redes-fb" onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
-                                                <i class="fa-brands fa-instagram fa-2x redes-ins" onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
-                                            </div>
-
-                                            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
-                                        </footer>
-
-                                    </body>
-                                    </html>
+    </body>
+</html>

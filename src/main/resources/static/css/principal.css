@@ -19,7 +19,19 @@
     position: fixed;
     text-align: center;
     background-color: #BEDDED;
+    position: relative;
+    transform: translateY(-45%);
 
+}
+
+
+.usuarioA {
+    
+    color:white;
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 2rem;
+    
 }
 
 .menuI {
@@ -216,8 +228,8 @@ h1, h2, h3 {
 /* Footer */
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;

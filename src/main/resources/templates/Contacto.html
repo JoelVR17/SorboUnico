@@ -3,31 +3,23 @@
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-    <title>Sorbo Único</title>
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/normalize.css">
-</head>
+    <head th:replace="layout/contactoPlantilla :: headC">
 
-<body>
-    <header th:replace="layout/contactoPlantilla :: header" class="header">
+    </head>
 
-    </header>
+    <body>
+        <header th:replace="layout/contactoPlantilla :: header" class="header">
 
-    <main th:replace="layout/contactoPlantilla :: main">
+        </header>
 
-    </main>
+        <main th:replace="layout/contactoPlantilla :: main">
 
-    <footer th:replace="layout/contactoPlantilla :: footer">
+        </main>
 
-    </footer>
+        <footer th:replace="layout/contactoPlantilla :: footer">
 
-</body>
+        </footer>
+
+    </body>
 
 </html>

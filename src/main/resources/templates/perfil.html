@@ -2,27 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-    <title>Sorbo Único</title>
-    <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/perfil.css">
-    <link rel="stylesheet" href="css/normalize.css">
+<head th:replace="layout/PerfilPlantilla :: headP">
+
 </head>
 <body>
-    <header th:replace="layout/perfilPlantilla :: header">
+    <header th:replace="layout/PerfilPlantilla :: header">
         
     </header>
         
-    <main th:replace="layout/perfilPlantilla :: main">
+    <main th:replace="layout/PerfilPlantilla :: main">
 
     </main>
 
-    <footer th:replace="layout/perfilPlantilla :: footer">
+    <footer th:replace="layout/PerfilPlantilla :: footer">
 
     </footer>
 

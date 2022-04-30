@@ -3,66 +3,68 @@
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
 
-    <head>
+    <head th:fragment="headN" >
         <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-                        <title>Sorbo Único</title>
-                        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
-                        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-                            <link rel="stylesheet" href="css/nosotros.css">
-                                <link rel="stylesheet" href="css/normalize.css">
-                                    </head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+        <title>Sorbo Único</title>
+        <script src="https://kit.fontawesome.com/485d2f57e5.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="css/nosotros.css" rel="stylesheet" type="text/css"/>
+    </head>
 
-                                    <body>
-                                        <header th:fragment="header" class="header">
-                                            <div class="contenedor"> 
+    <body>
+        <header th:fragment="header" class="header">
+            <div class="contenedor"> 
 
-                                                <div class="barra-nav contenedor">
-                                                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
-                                                    <nav class="nav">
-                                                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
-                                                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
-                                                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
-                                                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
-                                                        <a class="nav-linkSelec" href="/Nosotros" th:text="#{menu.nosotros}"></a>
-                                                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
-                                                    </nav>
-                                                </div>
-                                            </div>         
-                                        </header>
+                <div class="barra-nav contenedor">
+                    <a class="logo" href="/"><h1 class="logo_nombre no-margin centrar-texto"><span class="logo_nombre_light">Sorbo<b>Único</b></span></h1></a>
+                    <nav class="nav">
+                        <a class="nav-link" href="/Perfil" th:text="#{menu.miPerfil}"></a>
+                        <a class="nav-link" href="/Menu" th:text="#{menu.menu}"></a>
+                        <a class="nav-link" href="/Reserva" th:text="#{menu.reservas}" sec:authorize="hasRole('ROLE_USERPREMIUN')"></a>
+                        <a class="nav-link" href="/Contacto" th:text="#{menu.contacto}"></a>
+                        <a class="nav-linkSelec" href="/Nosotros" th:text="#{menu.nosotros}"></a>
+                        <a class="nav-link" href="/cliente/listado" th:text="#{menu.cliente}" sec:authorize="hasRole('ROLE_ADMIN')"></a>
+                        <a class="nav-link" href="/Login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </nav>
+                </div>
+            </div>         
+        </header>
 
-                                        <main th:fragment="main" class="contenido">
-                                            <div class="info">
-                                                <div class="info-nosotros">
-                                                    <h2 th:text="#{nosotros.nuestraH}"></h2>
-                                                    <br>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium aspernatur beatae eligendi
-                                                        facere sapiente velit inventore ipsum aperiam possimus unde, numquam atque est asperiores error
-                                                        voluptatum consequatur tempora exercitationem! Recusandae.
-                                                    </p>
-                                                </div>
-                                                <div class="info-sucursales">
-                                                    <h2 th:text="#{nosotros.sucursales}"></h2>
-                                                    <div class="sucursal1"></div>
-                                                    <div class="sucursal2"></div>
-                                                </div>
-                                            </div>
-                                        </main>
+        <main th:fragment="main" class="contenido">
+            <div class="info">
+                <div class="info-nosotros">
+                    <h2 th:text="#{nosotros.nuestraH}"></h2>
+                    <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium aspernatur beatae eligendi
+                            facere sapiente velit inventore ipsum aperiam possimus unde, numquam atque est asperiores error
+                            voluptatum consequatur tempora exercitationem! Recusandae.
+                        </p>
+                </div>
+                <div class="info-sucursales">
+                    <h2 th:text="#{nosotros.sucursales}"></h2>
+                    <div class="sucursal1"></div>
+                    <div class="sucursal2"></div>
+                </div>
+            </div>
+        </main>
 
-                                        <footer th:fragment="footer" class="footer">
-                                            <div class="redes">
-                                                <i class="fa-brands fa-facebook-f fa-2x redes-fb"
-                                                   onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
-                                                <i class="fa-brands fa-instagram fa-2x redes-ins"
-                                                   onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
-                                            </div>
+        <footer th:fragment="footer" class="footer">
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f fa-2x redes-fb"
+                   onclick="location.href = 'https://www.facebook.com/Sorbo-%C3%9Anico-106033188724357/?ref=page_internal'"></i>
+                <i class="fa-brands fa-instagram fa-2x redes-ins"
+                   onclick="location.href = 'https://www.instagram.com/sorbo.unico/'"></i>
+            </div>
 
-                                            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
-                                        </footer>
+            <p class="derechos" th:text="#{footer.derechos}">&COPY;</p>
+        </footer>
 
-                                    </body>
+    </body>
 
-                                    </html>
+</html>
